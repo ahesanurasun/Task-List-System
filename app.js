@@ -38,7 +38,7 @@ function createTask() {
     // Create a Edit Btn
     const editBtn = document.createElement("button");
     editBtn.classList.add("edit");
-    editBtn.innerText = "Edit";
+    editBtn.innerText = "edit";
 
     // assign delete & edit Btn
     buttonGroup.appendChild(deleatBtn);
@@ -61,21 +61,9 @@ function createTask() {
   });
 
   const editBtn = document.querySelectorAll(".edit");
-//   editBtn.forEach((item) => {
-//     item.addEventListener("click", (e) => {
-//       let task = e.target.parentNode.parentNode.firstElementChild;
-//     //   console.log(task);
-//       if (e.target.innerText === "edit") {
-//         task.removeAttribute("readonly");
-//         task.focus();
-//         item.innerText = "save";
-//       } else {
-//         item.innerText = "edit";
-//         task.setAttribute("readonly", "readonly");
-//       }
-//     });
-//   });
-editBtn.forEach((item) => {
+  console.log(editBtn);
+
+  editBtn.forEach((item) => {
     item.addEventListener("click", (e) => {
       //   console.log(e.target.parentNode.parentNode);
       let task = e.target.parentNode.parentNode.firstElementChild;
